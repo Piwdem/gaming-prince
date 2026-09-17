@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#080812">
+<title>Gaming Prince</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#080812;color:#fff;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:-30%;z-index:-2;background:
+radial-gradient(circle at 20% 20%,rgba(114,53,255,.28),transparent 28%),
+radial-gradient(circle at 80% 30%,rgba(0,207,255,.18),transparent 25%),
+radial-gradient(circle at 50% 90%,rgba(255,35,155,.16),transparent 28%)}
+body:after{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,8,18,.15),rgba(8,8,18,.8))}
+nav{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:16px 6%;background:rgba(8,8,18,.72);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
+.logo{font-size:1.35rem;font-weight:900;letter-spacing:.5px}.logo span{color:#9d65ff}
+.navlinks{display:flex;gap:26px}.navlinks a{color:#bbb;text-decoration:none;font-weight:600}.navlinks a:hover{color:#fff}
+.menu{display:none;background:none;border:0;color:#fff;font-size:1.5rem}
+.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:80px 6% 60px}
+.badge{display:inline-block;padding:8px 14px;border:1px solid rgba(157,101,255,.5);border-radius:999px;background:rgba(157,101,255,.1);color:#cbb0ff;font-size:.85rem;font-weight:700;margin-bottom:20px}
+h1{font-size:clamp(3.2rem,9vw,7.5rem);line-height:.9;font-weight:1000;letter-spacing:-5px;background:linear-gradient(90deg,#fff,#b77aff,#48ddff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:680px;margin:26px auto;color:#b8b8c8;font-size:clamp(1rem,2vw,1.25rem);line-height:1.6}
+.buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}.btn{padding:14px 24px;border-radius:14px;text-decoration:none;font-weight:800;transition:.2s}.primary{background:#8c4dff;color:white;box-shadow:0 0 30px rgba(140,77,255,.35)}.secondary{border:1px solid #33334a;color:#eee;background:#11111e}.btn:hover{transform:translateY(-3px)}
+section{padding:70px 6%;max-width:1250px;margin:auto}.section-title{font-size:2rem;margin-bottom:25px}.muted{color:#999}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:rgba(18,18,31,.76);border:1px solid rgba(255,255,255,.09);border-radius:22px;padding:24px;min-height:190px;transition:.25s;box-shadow:0 15px 50px rgba(0,0,0,.18)}.card:hover{transform:translateY(-6px);border-color:rgba(157,101,255,.45)}
+.icon{font-size:2.3rem;margin-bottom:18px}.card h3{margin-bottom:9px}.card p{color:#a6a6b5;line-height:1.5}
+.rank{display:flex;align-items:center;gap:16px;padding:17px;border-radius:16px;background:#11111e;border:1px solid #252538;margin:10px 0}.rank strong{margin-left:auto;color:#b98bff}.avatar{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#8c4dff,#28d8ff);font-weight:900}
+footer{text-align:center;padding:45px 20px;color:#777;border-top:1px solid rgba(255,255,255,.08);margin-top:40px}
+@media(max-width:800px){.navlinks{display:none}.menu{display:block}.grid{grid-template-columns:1fr 1fr}section{padding:55px 5%}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.hero{min-height:72vh;padding-top:65px}h1{letter-spacing:-3px}.navlinks.open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:0;background:#0b0b16;padding:10px 5%;border-bottom:1px solid #222}.navlinks.open a{padding:14px 0}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Gamin <span>Prince</span> 👑</div>
+  <div class="navlinks" id="links">
+    <a href="#home">Home</a><a href="#games">Games</a><a href="#ranking">Ranking</a><a href="#news">News</a>
+  </div>
+  <button class="menu" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div>
+    <div class="badge">👑 WELCOME TO GAMIN PRINCE</div>
+    <h1>PLAY.<br>DOMINATE.</h1>
+    <p>Deine Gaming-Zentrale für Games, Rankings und die neuesten Gaming-News – optimiert für PC, iPhone und iPad.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#games">Games entdecken</a>
+      <a class="btn secondary" href="#ranking">Rangliste ansehen</a>
+    </div>
+  </div>
+</section>
+
+<section id="games">
+  <h2 class="section-title">🎮 Deine Games</h2>
+  <p class="muted">Die beliebtesten Games auf einen Blick.</p><br>
+  <div class="grid">
+    <article class="card"><div class="icon">⚔️</div><h3>Roblox</h3><p>Entdecke neue Experiences, Builds und Gaming-Tipps.</p></article>
+    <article class="card"><div class="icon">🔥</div><h3>Action Games</h3><p>Clutches, Combos und schnelle Matches.</p></article>
+    <article class="card"><div class="icon">🏆</div><h3>Competitive</h3><p>Stell dich der Challenge und klettere im Ranking.</p></article>
+  </div>
+</section>
+
+<section id="ranking">
+  <h2 class="section-title">🏆 Leaderboard</h2>
+  <div class="rank"><div class="avatar">GP</div><span>Gaming Prince</span><strong>99.999 XP</strong></div>
+  <div class="rank"><div class="avatar">01</div><span>ShadowKing</span><strong>87.420 XP</strong></div>
+  <div class="rank"><div class="avatar">02</div><span>Nova</span><strong>76.850 XP</strong></div>
+</section>
+
+<section id="news">
+  <h2 class="section-title">📰 Gaming News</h2>
+  <div class="grid">
+    <article class="card"><div class="icon">🚀</div><h3>Neue Games</h3><p>Hier kannst du später deine eigenen News und Updates eintragen.</p></article>
+    <article class="card"><div class="icon">🎁</div><h3>Events</h3><p>Verpasse keine Events, Challenges oder Community-Aktionen.</p></article>
+    <article class="card"><div class="icon">👑</div><h3>Community</h3><p>Baue deine eigene Gaming-Community rund um Gaming Prince auf.</p></article>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 Gaming Prince · Made for Gamers 👑</footer>
+<script>
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('links').classList.remove('open')));
+</script>
+</body>
+</html>
